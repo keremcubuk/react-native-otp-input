@@ -89,8 +89,8 @@ declare module '@twotalltotems/react-native-otp-input' {
   }
 
   export interface OTPInputViewState {
-      digits: string[];
-      selectedIndex: number;
+    digits: string[];
+    selectedIndex: number;
   }
 
   export default class OTPInputView extends React.Component<InputProps, OTPInputViewState> {

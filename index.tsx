@@ -125,7 +125,7 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
                 }
             } else {
                 text.split("").forEach((value) => {
-                    if(index < pinCount) {
+                    if (index < pinCount) {
                         newdigits[index] = value;
                         index += 1;
                     }
@@ -170,7 +170,7 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
     blurAllFields = () => {
         this.setState({
             selectedIndex: -1,
-        },() => {
+        }, () => {
             this.fields.forEach((field: TextInput | null) => (field as TextInput).blur())
         });
     }
@@ -200,7 +200,7 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
                         this.handleChangeText(index, text)
                     }}
                     onKeyPress={({ nativeEvent: { key } }) => { this.handleKeyPressTextInput(index, key) }}
-                    value={ !clearInputs ? digits[index]: "" }
+                    value={!clearInputs ? digits[index] : ""}
                     keyboardAppearance={keyboardAppearance}
                     keyboardType={keyboardType}
                     textContentType={isAutoFillSupported ? "oneTimeCode" : "none"}
